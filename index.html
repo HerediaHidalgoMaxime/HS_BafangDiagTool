@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Bafang Diag Tool</title>
+    <style>
+      table { border-collapse: collapse; display: inline-block;  }
+      table, th, td { border: 1px solid black; }
+  </style>
+  </head>
+  <body>
+    <h1>Bafang Diag Tool</h1>
+
+    <div>
+      <button type="button" id="refresh_button"> refresh </button>
+      <select id="com_select"></select>
+
+      <button type="button" id="connect_button"> connect </button>
+      <button type="button" disabled id="disconnect_button"> disconnect </button>
+      <button type="button" id="UpdateUnknown"> Update </button>
+
+    </div>
+
+    <div>
+      <label for="PAS">PAS:</label>
+      <input type="number" id="PAS" name="PAS" min="0" max="9" value="9">
+      <label for="light">Light:</label>
+      <input type="checkbox" id="Light" name="Light">
+    </div>
+
+
+
+    <div>
+      <span id="Unknown" style="display: inline;"></span>
+      <span id="RuntimeData" style="display: inline;"></span>
+    </div>
+
+
+
+
+
+    <canvas id="chart" height="500px" width="1000px"></canvas>
+
+    <div>
+      <span id="ControlerVersion"></span>
+      <span id="ThrottleInfo"></span>
+      <span id="BasicSettings"></span>
+      <span id="PedalAssistSettings"></span>
+    </div>
+
+
+    <div id="error"></div>
+    <span id="ports" style="display: inline;"></span>
+
+    <!-- You can also require other files to run in this process -->
+
+    <script src="./com_request.js"></script>
+    <script src="./com_config.js"></script>
+    <script src="./com_runtime.js"></script>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
+
+

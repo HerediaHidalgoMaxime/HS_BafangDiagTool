@@ -1,0 +1,24 @@
+{
+  "name": "hs-bafang-diag-tool",
+  "version": "0.0.1",
+  "description": "A diagnostic tool for BAFANG BSSxx controler",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/HerediaHidalgoMaxime/HS_BafangDiagTool",
+  "keywords": [
+    "bafang",
+    "ebike"
+  ],
+  "author": "Maxime HEREDIA-HIDALGO (maxime@heredia-systems.com)",
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "electron": "^18.2.0"
+  },
+  "dependencies": {
+    "serialport": "^10.3.0",
+    "tableify": "^1.1.1",
+    "chart.js": "^3.7.1"
+  }
+}
